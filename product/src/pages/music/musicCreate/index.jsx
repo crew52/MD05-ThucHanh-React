@@ -33,7 +33,7 @@ function MusicCreate() {
             MusicService.createMusic(musicData).then(() => {
                 toast.success("Music created successfully");
                 console.log(musicData)
-                navigate("/musics");
+                navigate("/");
             }).catch(() => {
                 toast.error("Failed to create music");
             });

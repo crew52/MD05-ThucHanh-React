@@ -61,11 +61,20 @@ function MusicList() {
         <div className="container mt-4">
             <h2 className="mb-4">Music Management</h2>
 
+            {/* Nếu có bài hát được chọn */}
+            {selectedMusic && (
+                <div className="mt-4">
+                    <h3>{selectedMusic.title}</h3>
+                    <p><strong>Singer:</strong> {selectedMusic.singer}</p>
+                    <p><strong>Composer:</strong> {selectedMusic.composer}</p>
+                </div>
+            )}
+
             {/* Search & Filter */}
             <div className="container mb-3">
                 <div className="d-flex justify-content-between align-items-center">
                     {/* Nút Create */}
-                    <Link to="/musics/create">
+                    <Link to="/create">
                         <button className="btn btn-primary">
                             <i className="bi bi-plus-lg"></i> Create
                         </button>
@@ -135,31 +144,13 @@ function MusicList() {
                         ))
                     ) : (
                         <tr>
-                            <td colSpan="6" className="text-center">No products found</td>
+                            <td colSpan="8" className="text-center">No products found</td>
                         </tr>
                     )}
                     </tbody>
                 </table>
 
             </div>
-
-            {/* Nếu có bài hát được chọn */}
-            {selectedMusic && (
-                <div className="mt-4">
-                    <h3>{selectedMusic.title}</h3>
-                    <p><strong>Singer:</strong> {selectedMusic.singer}</p>
-                    <p><strong>Composer:</strong> {selectedMusic.composer}</p>
-                    <p><strong>Duration:</strong> {selectedMusic.duration}</p>
-                    <p><strong>Likes:</strong> {selectedMusic.likes}</p>
-                    <p><strong>Status:</strong> {selectedMusic.status}</p>
-
-                    {/* Nút phát nhạc */}
-                    <audio controls>
-                        <source src={`http://localhost:3000/music/${selectedMusic.id}`} type="audio/mp3" />
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            )}
         </div>
     );
 }

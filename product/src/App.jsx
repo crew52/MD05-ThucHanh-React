@@ -7,8 +7,8 @@ function App() {
   return (
     <>
         <Routes>
-            <Route path={"/musics"} element={<MusicList/>}></Route>
-            <Route path="/musics/create" element={<MusicCreate/>} />
+            <Route path={"/"} element={<MusicList/>}></Route>
+            <Route path="/create" element={<MusicCreate/>} />
         </Routes>
     </>
   )

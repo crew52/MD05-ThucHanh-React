@@ -7,7 +7,7 @@
       "composer": "Nhạc Sĩ 1",
       "duration": "3:45",
       "likes": 2500,
-      "status": "Công Khai"
+      "status": "Lưu Trữ"
     },
     {
       "id": 2,
@@ -53,6 +53,15 @@
       "likes": 0,
       "status": "Lưu Trữ",
       "id": 6
+    },
+    {
+      "title": "34234",
+      "singer": "324234",
+      "composer": "234234",
+      "duration": "11:11",
+      "likes": 0,
+      "status": "Lưu Trữ",
+      "id": 7
     }
   ]
 }
