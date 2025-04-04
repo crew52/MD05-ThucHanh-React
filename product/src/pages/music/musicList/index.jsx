@@ -121,7 +121,7 @@ function MusicList() {
                                         onClick={() => {
                                             // Hiển thị hộp thoại xác nhận
                                             const confirmed = window.confirm(
-                                                `Are you sure you want to ${product.status === 'Công Khai' ? 'Lưu Trữ' : 'Công Khai'} this music?`
+                                                `Bạn có chắc chắn muốn đổi trạng thái bài hát này thành ${product.status === 'Công Khai' ? 'Lưu Trữ' : 'Công Khai'}?`
                                             );
                                             if (confirmed) {
                                                 handleUpdateStatus(product.id, product.status === 'Công Khai' ? 'Lưu Trữ' : 'Công Khai');
